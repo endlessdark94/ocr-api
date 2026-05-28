@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  ocr-api:
+    build: .
+    container_name: ocr-api
+    ports:
+      - "5000:5000"
+    restart: always
+    volumes:
+      - ./data:/tmp   # nơi lưu file PDF tạm thời
